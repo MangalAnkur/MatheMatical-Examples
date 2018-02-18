@@ -1,0 +1,48 @@
+# MatheMatical-Examples/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package self;
+
+/**
+ *
+ * @author Ankur Mangal
+ */
+import java.util.*;
+public class LCM 
+{
+    Scanner sc=new Scanner(System.in);
+    int x,y,z,i,a,j=0;
+    void fun()
+    {
+        System.out.println("Enter three numbers for LCM");
+        x=sc.nextInt();
+        y=sc.nextInt();
+        z=sc.nextInt();
+        a=x*y*z;
+        for(i=2;i<=a;i++)
+        {
+            if(i%x==0&& i%y==0 && i%z==0)
+            {
+                System.out.println("LCM is");
+                System.out.println(i);
+                break;
+            }
+        }
+        for(j=2;j<=a;j++)
+        {
+            if(x%j==0 && y%j==0 && z%j==0)
+            {
+                System.out.println("HCF is");
+                System.out.println(j);
+                break;
+            }
+        }
+    }    
+    public static void main(String args[])
+    {
+        LCM ob=new LCM();
+        ob.fun();
+    }
+}
